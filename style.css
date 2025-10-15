@@ -1,0 +1,54 @@
+:root{
+  --glass-bg: rgba(255,255,255,0.06);
+  --accent: #f6c74a;
+  --muted: #cbd5e1;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB',Roboto,'Helvetica Neue',Arial;}
+body{
+  background:url('assets/壁纸.jpg') no-repeat center center fixed;
+  background-size:cover;
+  color:white;
+}
+.container{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+.card{
+  width:100%;
+  max-width:720px;
+  background:linear-gradient(180deg,rgba(7,18,44,0.7),rgba(3,10,27,0.6));
+  border-radius:18px;
+  padding:26px;
+  box-shadow:0 10px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+  border:1px solid rgba(255,255,255,0.06);
+  backdrop-filter:blur(6px);
+  position:relative;
+}
+h1{font-size:28px;text-align:center;margin:4px 0 8px;color:var(--accent);}
+.subtitle{font-size:13px;text-align:center;color:var(--muted);margin:0 0 18px;}
+.inputs{display:grid;grid-template-columns:1fr 1fr;gap:12px 18px;margin-bottom:14px;}
+.input-card{background:var(--glass-bg);padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);display:flex;flex-direction:column;gap:6px;}
+.input-row{display:flex;align-items:center;justify-content:space-between;}
+.input-row label{font-weight:600;color:var(--accent);font-size:14px;}
+.small{font-size:12px;color:var(--muted);}
+.input-row input[type=number]{width:96px;padding:6px 8px;border-radius:8px;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.9);color:#0b1220;font-weight:700;text-align:right;}
+.results{margin-top:6px;border-top:1px solid rgba(255,255,255,0.04);padding-top:14px;display:flex;flex-direction:column;gap:8px;align-items:center;}
+.result-row{display:flex;gap:8px;align-items:center;font-weight:600;}
+.result-row span{font-size:20px;}
+.star{font-size:32px;color:var(--accent);}
+.actions{margin-top:6px;}
+.btn{cursor:pointer;padding:8px 16px;border-radius:999px;border:none;font-weight:700;}
+.reset{background:#f43f5e;color:white;box-shadow:0 6px 18px rgba(244,63,94,0.18);}
+.author-inside{position:absolute;right:16px;bottom:10px;font-size:13px;color:var(--accent);opacity:0.9;font-weight:600;}
+.footer{margin-top:18px;text-align:center;color:rgba(255,255,255,0.85);font-size:13px;}
+@media(max-width:640px){
+  .inputs{grid-template-columns:1fr;}
+  h1{font-size:22px;}
+  .star{font-size:28px;}
+  .input-row input[type=number]{width:80px;}
+}
